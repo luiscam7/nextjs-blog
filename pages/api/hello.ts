@@ -1,6 +1,5 @@
-import '../styles/globals.css'
-import { AppProps } from 'next/app'
+import { NextApiRequest, NextApiResponse } from 'next'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+export default (_: NextApiRequest, res: NextApiResponse) => {
+  res.status(200).json({ text: 'Hello' })
 }
